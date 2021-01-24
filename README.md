@@ -3,21 +3,25 @@ Image resizer lambda function
 
 
 ## Installation
-  - dotnet new -i Amazon.Lambda.Templates
-  - dotnet new | Select-String -SimpleMatch 'lambda'
-
+```
+dotnet new -i Amazon.Lambda.Templates
+dotnet new | Select-String -SimpleMatch 'lambda'
+```
 
 ## Create Source Bucket in AWS S3
-  - aws s3 mb s3://<source bucket> --region us-west-2
-
+```
+aws s3 mb s3://<source bucket> --region us-west-2
+```
 
 ## Create Destination Bucket in AWS S3
-  - aws s3 mb s3://<destination bucket> --region us-west-2
-
+```
+aws s3 mb s3://<destination bucket> --region us-west-2
+```
 
 ## Create PutObject Policy
-  - aws iam create-policy --policy-name <policy name> --policy-document file://<filename>.json
-
+```
+aws iam create-policy --policy-name <policy name> --policy-document file://<filename>.json
+```
   Sample policy document (<filename>.json):
   {
   "Version": "2012-10-17",
@@ -42,29 +46,34 @@ Image resizer lambda function
 
 
 ## Create Empty Lambda Function
-  - dotnet new lambda.EmptyFunction --name ImageResizer --profile default --region us-west-2
-
+```
+dotnet new lambda.EmptyFunction --name ImageResizer --profile default --region us-west-2
+```
 
 ## Install Packages
-  - dotnet add package AWSSDK.S3
-  - dotnet add package Magick.NET-Q16-AnyCPU --version 7.21.1
-
+```
+dotnet add package AWSSDK.S3
+dotnet add package Magick.NET-Q16-AnyCPU --version 7.21.1
+```
 
 ## Deploy Lambda Function
-  - dotnet lambda deploy-function ImageResizer
-
+```
+dotnet lambda deploy-function ImageResizer
+```
 
 ## Add Trigger to ImageResizer Lambda Function
   - use <source bucket> as the source bucket
 
 
 ## Get Function Config
-  - dotnet lambda get-function-config ImageResizer
-
+```
+dotnet lambda get-function-config ImageResizer
+```
 
 ## Update Function Config
-  - dotnet lambda update-function-config
-
+```
+dotnet lambda update-function-config
+```
 
 ## References
   - https://devblogs.microsoft.com/dotnet/net-core-image-processing/
