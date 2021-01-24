@@ -2,7 +2,7 @@
 Image resizer lambda function
 
 
-# Installation
+## Installation
   - dotnet new -i Amazon.Lambda.Templates
   - dotnet new | Select-String -SimpleMatch 'lambda'
 
