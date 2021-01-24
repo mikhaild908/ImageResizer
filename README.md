@@ -39,6 +39,7 @@ aws iam create-policy --policy-name <policy name> --policy-document file://<file
   - image-resizer-role
   - AWSLambdaBasicExecutionRole
   - AmazonS3ReadOnlyAccess
+  - attach the PutObject Policy created above to the image-resizer-role
 
 
 ## Add function-role to aws-lambda-tools-default.json
