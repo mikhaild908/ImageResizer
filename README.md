@@ -29,7 +29,7 @@ aws iam create-policy --policy-name <policy name> --policy-document file://<file
       {
         "Effect": "Allow",
         "Action": "s3:PutObject",
-        "Resource": "arn:aws:s3:::<destination bucket>/*"
+        "Resource": "arn:aws:s3:::<`destination bucket>`/*"
       }
     ]
  }
