@@ -22,7 +22,7 @@ aws s3 mb s3://<destination bucket> --region us-west-2
 ```
 aws iam create-policy --policy-name <policy name> --policy-document file://<filename>.json
 ```
-  Sample policy document (<filename>.json):
+  Sample policy document (`<filename>`.json):
   {
   "Version": "2012-10-17",
     "Statement": [
@@ -42,7 +42,7 @@ aws iam create-policy --policy-name <policy name> --policy-document file://<file
 
 
 ## Add function-role to aws-lambda-tools-default.json
-  - "function-role": "arn:aws:iam::<account>:role/image-resizer-role"
+  - "function-role": "arn:aws:iam::`<account>`:role/image-resizer-role"
 
 
 ## Create Empty Lambda Function
@@ -62,7 +62,7 @@ dotnet lambda deploy-function ImageResizer
 ```
 
 ## Add Trigger to ImageResizer Lambda Function
-  - use <source bucket> as the source bucket
+  - use `<source bucket>` as the source bucket
 
 
 ## Get Function Config
