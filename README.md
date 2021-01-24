@@ -16,7 +16,7 @@ Image resizer lambda function
 
 
 ## Create PutObject Policy
-  - aws iam create-policy --policy-name <policy document> --policy-document file://<filename>.json
+  - aws iam create-policy --policy-name <policy name> --policy-document file://<filename>.json
 
   Sample policy document (<filename>.json):
   {
