@@ -42,7 +42,7 @@ aws iam create-policy --policy-name <policy name> --policy-document file://<file
 
 
 ## Add function-role to aws-lambda-tools-default.json
-  - "function-role": "arn:aws:iam::`<account>`:role/image-resizer-role"
+  - "function-role": "arn:aws:iam::`<account(ex: 123456789012)>`:role/image-resizer-role"
 
 
 ## Create Empty Lambda Function
